@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BackendDataService } from '../Services/backend-data.service';
+import { PaintingModel } from '../Services/PaintingModel';
 
 @Component({
   selector: 'app-paintings',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./paintings.component.css']
 })
 export class PaintingsComponent implements OnInit {
+  painting:PaintingModel[]=[];
 
-  constructor() { }
+  constructor(public BackendData:BackendDataService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
+    this.BackendData.getPaintings().subscribe((data)=>{
+      this.painting=JSON.parse(JSON.stringify(data));
+      console.log(this.painting);
+    })
   }
 
 }
