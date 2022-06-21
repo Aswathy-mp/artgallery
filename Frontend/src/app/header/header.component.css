@@ -1,0 +1,19 @@
+.navbar{
+    background-color: lemonchiffon;
+}
+.navbar-brand{
+    font-size: 250%;
+    padding-left: 1%;
+}
+#logo{
+    border-radius: 50%;
+    width: 5%;
+}
+.contact{
+    text-decoration: none;
+    padding-left: 15px;
+    color:gray ;
+}
+.contact:hover{
+color: black;
+}

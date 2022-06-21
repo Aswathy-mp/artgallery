@@ -1,0 +1,15 @@
+ul{
+    list-style: none;
+}
+.foot{
+    font-size: smaller;
+    text-decoration: none;
+    color: gray;
+    padding-bottom: 10%;
+}
+.foot:hover{
+    color: black;
+}
+.footop{
+    padding-top: 3%;
+}
